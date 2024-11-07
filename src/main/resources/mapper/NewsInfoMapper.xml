@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.sen.dnews.mapper.NewsInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.sen.dnews.model.entity.NewsInfo">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="unit" column="unit" jdbcType="VARCHAR"/>
+            <result property="journalist" column="journalist" jdbcType="VARCHAR"/>
+            <result property="content" column="content" jdbcType="VARCHAR"/>
+            <result property="type" column="type" jdbcType="VARCHAR"/>
+            <result property="label" column="label" jdbcType="VARCHAR"/>
+            <result property="reportTime" column="reportTime" jdbcType="TIMESTAMP"/>
+            <result property="eventTime" column="eventTime" jdbcType="TIMESTAMP"/>
+            <result property="eventLocation" column="eventLocation" jdbcType="VARCHAR"/>
+            <result property="eventCharacter" column="eventCharacter" jdbcType="VARCHAR"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,unit,journalist,
+        content,type,label,
+        reportTime,eventTime,eventLocation,
+        eventCharacter,createTime,updateTime,
+        isDelete
+    </sql>
+</mapper>
